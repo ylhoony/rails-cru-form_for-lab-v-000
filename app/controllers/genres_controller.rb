@@ -24,4 +24,9 @@ class GenresController < ApplicationController
 
   end
 
+  private
+  def genre_params(*args)
+    params.require(:genre)
+  end
+
 end
