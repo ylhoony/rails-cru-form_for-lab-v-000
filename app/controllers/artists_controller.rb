@@ -21,6 +21,7 @@ class ArtistsController < ApplicationController
   def edit
     @artist = Artist.find(params[:id])
     @artist.update(artist_params(:name, :bio))
+    @artist.save
     redirect_to artist_path(@artist)
   end
 
